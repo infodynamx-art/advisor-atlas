@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#f5f6f8">
+  <meta name="description" content="Explore the real decision paths behind the Dynamx Advisor. Change an answer and watch the recommendation change.">
+  <title>Advisor Atlas · Dynamx</title>
+  <link rel="icon" type="image/svg+xml" href="./favicon.svg">
+  <link rel="stylesheet" href="./src/style.css">
+</head>
+<body>
+  <a class="skip-link" href="#inspector">Skip to the current question</a>
+  <div class="app-shell">
+    <aside class="sidebar" aria-label="Journeys">
+      <a class="brand" href="./" aria-label="Advisor Atlas home"><span class="brand-symbol" aria-hidden="true">a<span>·</span></span><span>advisor atlas<small>BY DYNAMX</small></span></a>
+      <div class="nav-label">THE DECISION LIBRARY <span>04</span></div>
+      <nav id="journey-nav" aria-label="Choose a journey"></nav>
+      <div class="sidebar-bottom">
+        <div class="source-card"><span class="source-orbit" aria-hidden="true"></span><strong>Real rules. Visible reasoning.</strong><p>Every path leads to an answer from the Advisor’s source.</p><button class="text-link" id="about-button">Inside the atlas <span aria-hidden="true">↗</span></button></div>
+        <div class="sidebar-signature"><span>DYNAMX LAB</span><span>EXPERIMENT 001</span></div>
+      </div>
+    </aside>
+    <main class="workspace">
+      <header class="topbar"><div class="breadcrumb">The lab <span>/</span> <strong>Advisor Atlas</strong><span class="version">v1.0</span></div><div class="top-actions"><span class="local-badge"><i></i> Runs in your browser</span><button class="icon-text" id="share-button" aria-label="Copy a link to this path"></button></div></header>
+      <section class="page-heading"><div><div class="eyebrow">A LOOK INSIDE THE ADVISOR</div><h1>Follow the thinking<span>.</span></h1><p>Change an answer. See where the advice goes.</p></div><button class="primary-button" id="scenario-button"></button></section>
+      <div class="workbench">
+        <section class="graph-section" aria-label="Interactive decision map">
+          <div class="graph-toolbar"><div class="graph-name"><span class="map-status" aria-hidden="true"></span><strong id="map-title"></strong><span id="map-count"></span></div><div class="segmented" aria-label="Map view"><button id="view-all" aria-pressed="true">All branches</button><button id="view-path" aria-pressed="false">This path</button></div></div>
+          <div class="canvas" id="canvas" tabindex="0" role="region" aria-label="Decision graph. Drag empty space to pan. Use arrow keys to pan, plus or minus to zoom, and F to fit.">
+            <div class="canvas-wash"></div>
+            <div class="canvas-kicker"><span id="canvas-kicker">REPEAT PURCHASE</span><p id="canvas-caption">One answer can change the next step.</p></div>
+            <div class="world" id="world"><svg id="edges" aria-hidden="true"></svg><div id="nodes"></div></div>
+            <div class="map-legend"><span><i class="legend-current"></i>Your path</span><span id="pinned-legend" hidden><i class="legend-pinned"></i>Pinned path</span><span><i class="legend-other"></i>Other possibilities</span></div>
+            <div class="zoom-controls"><button id="zoom-out" aria-label="Zoom out">−</button><output id="zoom-value" aria-label="Map zoom">100%</output><button id="zoom-in" aria-label="Zoom in">+</button><span></span><button id="fit-button" aria-label="Fit map to view"></button></div>
+          </div>
+          <div class="path-strip"><div class="path-strip-label"><span>YOUR CHOICES</span><button id="reset-button" class="text-link">Start over</button></div><div id="breadcrumbs" class="answer-trail"></div></div>
+          <div class="graph-footer"><span id="graph-summary"></span><button id="play-button" class="text-link"></button></div>
+        </section>
+        <aside id="inspector" class="inspector" tabindex="-1" aria-label="Question and Advisor response"></aside>
+      </div>
+      <footer class="workspace-footer"><span>Every line is a possible decision. Every answer has a reason.</span><button class="text-link" id="export-button">Export this path <span aria-hidden="true">↗</span></button></footer>
+    </main>
+  </div>
+  <dialog id="modal" aria-labelledby="modal-title"><div id="modal-content"></div><button class="modal-close" aria-label="Close dialog">×</button></dialog>
+  <div id="toast" class="toast" role="status"></div>
+  <div id="announcement" class="sr-only" role="status" aria-live="polite" aria-atomic="true"></div>
+  <noscript><div class="no-script">Enable JavaScript to explore the Advisor’s decision map. The original rules are included in the project’s source files.</div></noscript>
+  <script type="module" src="./src/app.mjs"></script>
+</body>
+</html>

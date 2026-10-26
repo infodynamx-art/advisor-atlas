@@ -1,0 +1,15 @@
+{
+  "source": "curated-advisor-first-slice-v1",
+  "captured": "2026-10-25",
+  "files": {
+    "content.mjs": {
+      "sha256": "7b6fa94a2d131d55d7471f9a6651f69ff0b469b4b4462b2395165f962e370096",
+      "bytes": 7901
+    },
+    "planning-content.mjs": {
+      "sha256": "870e540d9ec24078e4a9b060aa21a698956aa8d819c64e3a5b3a1bb7f081d320",
+      "bytes": 22684
+    }
+  },
+  "note": "Exact local source snapshot. Snapshot and explorer are not evidence of deployed website behavior."
+}

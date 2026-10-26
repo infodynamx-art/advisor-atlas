@@ -1,0 +1,13 @@
+{
+  "name": "dynamx-advisor-atlas",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "An explorable map of the Dynamx Advisor's real decision rules.",
+  "scripts": {
+    "start": "node scripts/serve.mjs",
+    "test": "node --test tests/*.test.mjs",
+    "test:browser": "node tests/browser.mjs"
+  },
+  "engines": { "node": ">=22" }
+}
